@@ -37,8 +37,19 @@ Comparator<Intger> comp = (Apple a1, Apple a2) -> a1.getWeight().compare(a2.getW
 # 함수형 인터페이스란?
 함수형 인터페이스는 구현해야 할 메서드가 딱 하나뿐인 인터페이스를 뜻합니다.
 
-함수 디스크립터
+# 함수 디스크립터
+**함수형 인터페이스의 추상 메서드 시그니처**를 람다 표현식으로 나타낸 것을 **함수 디스크립터** 라고 합니다.  
 
+예를 들어 Predicate<T> 같은 경우는
+```java
+  @FunctionalInterface
+  public interface Predicate<T> {
+    boolean test(T t);
+  }
+  
+  //T -> boolean
+```
+T라는 객체를 사용하는 불리언 표현식이 필  
 함수형 인터페이스의 추상 메서드 시그니처 == 함수 디스크립터
 boolean test(T t);
 - 함수형 인터페이스가 가지는 추상 메서드의 파라미터와 반환 타입을 정의
